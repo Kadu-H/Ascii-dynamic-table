@@ -7,11 +7,17 @@ int binario[8];
 int binaryToHexadecimal(){
 
     int parte1 = 0;
+    int parte2 = 0;
 
     char caractere1;
+    char caractere2;
 
     for(int i = 3;i >= 0;i--){
         parte1 = parte1 + binario[i] * pow(2,3-i);
+    }
+
+    for(int i = 7;i >= 4;i--){
+        parte2 = parte2 + binario[i] * pow(2,7-i);
     }
 
     std::cout<<"\n";
@@ -22,6 +28,14 @@ int binaryToHexadecimal(){
     }
     else{
         std::cout<<parte1;
+    }
+
+    if(parte2>=10){
+        caractere2 = parte2 + 55;
+        std::cout<<caractere2;
+    }
+    else{
+        std::cout<<parte2;
     }
 
     return 0;
