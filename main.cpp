@@ -1,6 +1,25 @@
 #include <iostream>
 #include <cstring>
 
+int binario[8];
+
+int decimalToBinary(int codigo){
+    int resto;
+
+    std::cout<<"\n";
+
+    for(int i = 7; i>=0; i--){
+        resto = codigo%2;
+        codigo = codigo/2;
+
+        binario[i] = resto;
+    }
+    for(int i=0;i<=7;i++){
+        std::cout<<binario[i];
+    }
+    return 0;
+}
+
 int readString(){
 
     char caracteres[255];
@@ -16,6 +35,7 @@ int readString(){
     for(int i = 0; i<=strlen(caracteres)-1; i++){
         codigoChar = caracteres[i];
         std::cout<<"\n"<<caracteres[i]<<" = "<<codigoChar;
+        decimalToBinary(codigoChar);
     }
     
 
