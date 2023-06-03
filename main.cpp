@@ -21,7 +21,8 @@ int binaryToHexadecimal(){
     }
 
     std::cout<<"\n";
-
+    
+    std::cout<<"0x";
     if(parte1>=10){
         caractere1 = parte1 + 55;
         std::cout<<caractere1;
