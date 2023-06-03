@@ -13,7 +13,7 @@ int readString(){
 
     caracteres[strlen(caracteres)-1] = '\0';
 
-    for(int i = 0; i<=strlen(caracteres); i++){
+    for(int i = 0; i<=strlen(caracteres)-1; i++){
         codigoChar = caracteres[i];
         std::cout<<"\n"<<caracteres[i]<<" = "<<codigoChar;
     }
