@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <math.h>
 
 int binario[8];
 
@@ -10,7 +11,7 @@ int binaryToHexadecimal(){
     char caractere1;
 
     for(int i = 3;i >= 0;i--){
-        parte1 = parte1 + binario[i];
+        parte1 = parte1 + binario[i] * pow(2,3-i);
     }
 
     std::cout<<"\n";
