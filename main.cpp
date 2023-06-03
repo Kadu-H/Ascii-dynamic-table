@@ -3,6 +3,10 @@
 
 int binario[8];
 
+int binaryToHexadecimal(){
+    return 0;
+}
+
 int decimalToBinary(int codigo){
     int resto;
 
