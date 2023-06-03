@@ -4,6 +4,25 @@
 int binario[8];
 
 int binaryToHexadecimal(){
+
+    int parte1 = 0;
+
+    char caractere1;
+
+    for(int i = 3;i >= 0;i--){
+        parte1 = parte1 + binario[i];
+    }
+
+    std::cout<<"\n";
+
+    if(parte1>=10){
+        caractere1 = parte1 + 55;
+        std::cout<<caractere1;
+    }
+    else{
+        std::cout<<parte1;
+    }
+
     return 0;
 }
 
@@ -21,6 +40,7 @@ int decimalToBinary(int codigo){
     for(int i=0;i<=7;i++){
         std::cout<<binario[i];
     }
+    binaryToHexadecimal();
     return 0;
 }
 
